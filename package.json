@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "-": "^0.0.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -15,16 +16,18 @@
     "@types/yup": "^0.28.0",
     "@unform/core": "^2.1.0",
     "@unform/web": "^2.1.0",
+    "D": "^1.0.0",
     "axios": "^0.19.2",
     "date-fns": "^2.14.0",
     "polished": "^3.5.2",
-    "react": "^16.13.1",
+    "react": "^16.13.0",
     "react-day-picker": "^7.4.8",
-    "react-dom": "^16.13.1",
+    "react-dom": "^16.13.0",
     "react-icons": "^3.10.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1",
+    "react-scripts": "3.4.0",
     "react-spring": "^8.0.27",
+    "react-test-renderer": "^16.13.1",
     "styled-components": "^5.1.0",
     "typescript": "~3.7.2",
     "uuid": "^7.0.3",
@@ -35,7 +38,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:corverage": "test --coverage --watchAll false"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/pages/**/*.tsx",
+      "src/components/**/*.tsx",
+      "src/hooks/*.tsx",
+      "!src/hooks/index.tsx"
+    ]
   },
   "browserslist": {
     "production": [
@@ -50,8 +62,10 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^3.3.0",
     "@typescript-eslint/eslint-plugin": "^2.29.0",
     "@typescript-eslint/parser": "^2.29.0",
+    "axios-mock-adapter": "^1.18.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.11.0",
