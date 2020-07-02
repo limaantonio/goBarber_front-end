@@ -4,7 +4,7 @@ import { FiLogIn, FiMail } from 'react-icons/fi';
 import { Form } from '@unform/web';
 import { FormHandles } from '@unform/core';
 import * as Yup from 'yup';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Container, Content, Background, AnimationContainer } from './styles';
 import logo from '../../assets/logo.svg';
 
@@ -40,7 +40,6 @@ const ForgotPassword: React.FC = () => {
           abortEarly: false,
         });
 
-        // history.push('/dashboard');
         await api.post('/password/forgot', {
           email: data.email,
         });
